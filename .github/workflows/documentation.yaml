@@ -16,6 +16,9 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build doc _build
+      - name: Mod Theme Color
+        run: |
+          sed -i 's/#336699/#181C62/g' _build/_static/bizstyle.css 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
