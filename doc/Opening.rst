@@ -1,7 +1,7 @@
 Opportunities
 =============
 
-> Deadline: December 1st, 2023 or vacancies being filled
+.. note:: Deadline: December 1st, 2023 or vacancies being filled
 
 Up to now, there are two Ph.D. scholarship and one PostDoc position. In the near future, our topics includes but not limited to:
 
