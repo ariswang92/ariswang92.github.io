@@ -48,7 +48,6 @@ Publications
 
 #. Bal G., Hoskins J., Wang Z., Asymmetric transport computations in Dirac models of topological insulators. JCP, to appear. `[arXiv] <https://arxiv.org/abs/2206.08847>`__
 
-
 #. Wang Z., Zhang W., Zhang Z., A data-driven model reduction method for parabolic inverse source problems and its convergence analysis. JCP, to appear. `[arXiv] <https://arxiv.org/abs/2110.07676>`__
 
 #. Cui T., Wang Z., Zhang Z., A variational neural network approach for glacier modelling with nonlinear rheology. CiCP, to appear. `[arXiv] <https://arxiv.org/abs/2209.02088>`__
