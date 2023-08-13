@@ -26,7 +26,7 @@ Beside Research and Teaching
 
 Useful Links
 ------------
-`Math at SPMS, NTU <https://www.ntu.edu.sg/spms/about-us/mathematics/>`_
+`DMS at SPMS, NTU <https://www.ntu.edu.sg/spms/about-us/mathematics/>`_
 
 `Stat Dept., UChicago <http://stat.uchicago.edu/>`_
 
