@@ -12,7 +12,7 @@ zhongjian dot wang at ntu dot edu dot sg
 Beside Research and Teaching
 ----------------------------
 
-.. image:: /resources/recent_photo.jpg
+.. image:: resources/recent_photo.jpg
    :width: 300
 
 * I am an amateur in playing soccer. I used to play for - math department in Tsinghua; Lapchee college, post graduate students association, Chinese students club in the University of Hong Kong; Chinese students club in the University of Chicago; various social team like, 2CFC, Sun Yat Sen Memorial Park Club in Hong Kong and Chinatown Club in Chicago; NTU Staff Team in Singapore.
