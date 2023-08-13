@@ -7,11 +7,13 @@ I am always happy to discuss any of the course material from current and past co
 Current Courses
 ---------------
 
+I am not teaching this semester at NTU. 
+
 .. toctree::
    :maxdepth: 1
    :caption: Link to Course Homepages:
    
-   courses/stat251_2023spr/CourseHomepage
+   
 
    
 
@@ -19,10 +21,13 @@ Current Courses
 Past Courses
 ------------
 
+**List of Lectures at UChicago**
+
 .. toctree::
    :maxdepth: 1
-   :caption: Link to Course Homepages:
-
+   :caption: Links:
+   
+   courses/stat251_2023spr/CourseHomepage
    courses/stat24300_2023win/CourseHomepage
    courses/stat31120_2022aut/CourseHomepage
    courses/stat251_2022spr/CourseHomepage
