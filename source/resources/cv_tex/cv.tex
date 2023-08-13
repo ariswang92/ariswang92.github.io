@@ -1,0 +1,272 @@
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.500in}
+\addtolength{\evensidemargin}{-0.500in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-10pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item{
+		\textbf{#1}{ #2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+	\item{
+		{\vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[3]{	\item{
+		\begin{tabular*}{0.99\linewidth}{ll@{\extracolsep{\fill}}r}
+			\textbf{#1} & #2 &  \textit{#3}
+			\end{tabular*}\vspace{-5pt}
+		}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcounter{pubcounter}
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+	
+	%----------HEADING-----------------
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{{\LARGE Zhongjian Wang}} & Email: \href{mailto:}{zhongjian@uchicago.edu}\\
+		\href{http://www.wangzhongjian.com}{Website: wangzhongjian.com} & Mobile:~~~+1-347-506-5855 \\
+
+	\end{tabular*}
+	\section{Employment}
+		\resumeSubHeadingListStart
+	\resumeSubheading{The University of Chicago, Department of Statistics and CCAM}{Chicago}{William H. Kruskal Instructor, Mentor: Prof. Guillaume Bal}{2020-present}
+
+	\resumeSubHeadingListEnd
+	%-----------EDUCATION-----------------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{The University of Hong Kong, Department of Mathematics}{Hong Kong}
+	{Doctor of Philosophy, Supervisor: Prof. Zhang Zhiwen}{2016--2020}
+	\resumeSubheading
+	{Tsinghua University, Department of Mathematical Sciences}{Beijing}
+	{Bachelor of Science, member of XueTang project}{2012--2016}
+
+	\resumeSubHeadingListEnd
+	\section{Research Interests}
+	Applied analysis and computational methods for physics and engineering problems, including but not limited to,
+	\vspace{-5pt}
+	\resumeSubHeadingListStart
+	\resumeItem{structure preserving schemes:}{Lagrangian approach for effective diffusivities, KPP front wave speed; scattering in topological insulators;}
+	\vspace{-5pt}
+	\resumeItem{neuron net models:}{transport maps, multiscale physic problems, scattering matrices;}
+		\vspace{-5pt}
+	\resumeItem{data-driven model reduction:}{conditional density function in filtering, uniform accuracy schemes in time integration, inverse problems.}
+	\resumeSubHeadingListEnd
+	%-----------PROJECTS-----------------
+	\section{Awards and Scholarships}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Best PhD thesis Award }{ Hong Kong Mathematical Society}{2021}
+	\resumeSubItem{Student Travel Award for UQ20 }{Society for Industrial and Applied Mathematics}{2019}
+	\resumeSubItem{Student Travel Award for CSE19 }{Society for Industrial and Applied Mathematics}{2019}
+	\resumeSubItem{Pilot Scheme on International Experience }{ Faculty of Science, HKU}{2017}
+\resumeSubItem{IPAM Student Travel Support }{ Institute for Pure \& Applied Mathematics, UCLA}{2017}
+	\resumeSubItem{Hong Kong Ph.D. Fellowship }{ Research Grants Council of HK}{2016}
+	\resumeSubItem{Scholarship for Academic Excellence }{ Tsinghua University}{2013}
+	\resumeSubItem{Gold Medalist }{ China Mathematics Olympiad}{2012}
+	\resumeSubHeadingListEnd
+	%-----------Awards-----------------
+	\section{Publications}
+	\resumeSubHeadingListStart
+	\resumeItem{Published and Accepted}{}
+	\begin{enumerate}
+			\item{Bal, G., Hoskins, J.G., Wang Z., Asymmetric transport computations in Dirac models of topological insulators \textsl{(JCP, to appear)}}
+			\item{Wang, Z., Zhang W., Zhang Z., A data-driven model reduction method for parabolic inverse source problems and its convergence analysis \textsl{(JCP, to appear)}}
+			\item{Cui, T., Wang, Z., Zhang, Z., A variational neural network approach for glacier modelling with nonlinear rheology \textsl{(CiCP, to appear)}}
+		\item{ Li, S., Wang, Z., Yau, S. S. T., Zhang, Z., Solving high-dimensional nonlinear filtering problems using a tensor train decomposition method \textsl{(IEEE TAC, to appear)}}
+		\item{Wang, Z., Xin, J., Zhang, Z., DeepParticle: Learning invariant measure by a deep neural network minimizing Wasserstein distance on data generated from an interacting particle method, Journal of Computational Physics (2022): 111309.}
+		\item{Wang, Z., Xin, J., Zhang, Z., Computing effective diffusivities in 3D time-dependent chaotic flows with a convergent Lagrangian numerical method, ESAIM: M2AN 56 (2022) 1521–1544}
+	    \item{Lyu, J., Wang, Z., Xin, J., Zhang, Z., A convergent interacting particle method and computation of KPP front speeds in chaotic flows, SIAM Journal on Numerical Analysis, 2022, 60(3): 1136-1167}
+		\item{Wang, Z., Xin, J., Zhang, Z., Sharp error estimates on a stochastic structure-preserving scheme in computing effective diffusivity of 3D chaotic flows, Multiscale Model and Simulation, 19 (2021), no. 3, 1167–1189}
+		\item{ Lyu, J., Wang, Z., Xin, J., Zhang, Z., Convergence analysis of stochastic structure-preserving schemes for computing effective diffusivity in random flows, SIAM Journal on Numerical Analysis, 58 (2020), no. 5, 3040–3067.}
+		\item{Wang, Z., Zhang, Z., A mesh-free method for interface problems using the deep learning approach,  Journal of Computational Physics (2020): 108963.}
+		\item{Wang, Z. Luo, X., Yau, S. S. T., Zhang, Z., Proper orthogonal decomposition method to nonlinear filtering problems in medium-high dimension, IEEE Transactions on Automatic Control, 65 (2020), no. 4, 1613–1624.}
+		\item{Wang, Z., Xin, J., Zhang, Z.,  Computing effective diffusivity of chaotic and stochastic flows using structure-preserving schemes, SIAM Journal on Numerical Analysis, 56(4), 2322-2344.}
+		\setcounter{pubcounter}{\value{enumi}}
+	\end{enumerate}
+	\resumeItem{Preprints and Under-preparation}{}
+		\begin{enumerate}
+%			\setcounter{enumi}{\value{pubcounter}}
+\item {Lu, Y., Wang, Z., Bal, G., Understanding the diffusion models by conditional expectations. \textsl{arXiv:2301.07882}}
+	\item{T. Hou, Wang, Z.,  Zhang, Z. A class of robust numerical methods for solving dynamical systems with multiple time scales \textsl{(arXiv:1909.04289)}}
+	\item{Wang, Z., Xin, J., Zhang Z.,A DeepParticle method for learning and generating aggregation patterns in multi-dimensional Keller-Segel chemotaxis systems  \textsl{(arXiv:2209.00109)}}
+	\item{Bal, G.,  Chen, B., Wang, Z. Long time asymptotics of mixed-type Kimura diffusions} \textsl{(arXiv:2210.10037)}
+	\item{Xie, Y., Wang, Z., Zhang, Z., Random block coordinate descent methods for computing optimal transport and convergence analysis \textsl{(arXiv:2212.07046)}}
+	\item{Wang, Z., Zhang W., Zhang Z., Stochastic convergence of regularized solutions for backward heat conduction problems}
+	\item{Non-convergence tests for trajectory averages of ergodic Markov chains and diffusions}
+		\setcounter{pubcounter}{\value{enumi}}
+		\end{enumerate}
+	\resumeItem{Dissertations}{}
+\begin{enumerate}
+		%		\setcounter{enumi}{\value{pubcounter}}
+	\item Robust Lagrangian Numerical Schemes in Computing Effective Diffusivities for Chaotic and Random Flows, \textsl{Ph.D. Thesis, advisor: Prof. Zhiwen Zhang at HKU}
+	\item Convergence analysis of strong approximation to stochastic differential equation, \textsl{Bachelor Thesis, advisor: Prof. Espen Robstad Jakobsen at ENS}
+		\setcounter{pubcounter}{\value{enumi}}
+\end{enumerate}
+		\resumeSubHeadingListEnd
+	Names in Math papers are arranged in alphabetical order. For the most recent updates, please refer to the 	\href{https://scholar.google.com/citations?hl=en&user=XBdQFEsAAAAJ}{Google Scholar} or
+	ORCiD: \href{https://orcid.org/0000-0002-5954-2483}{0000-0002-5954-2483}.
+	\section{Teaching Experiences}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{The University of Chicago}{}{Lecturer of undergraduate and graduate courses}{2020-present}
+  \resumeItemListStart
+\resumeItem{STAT31120 Numerical Methods for Stochastic Differential Equations}{\\20/21 Spring, 21/22 Winter, 21/22 Autumn}
+\resumeItem{STAT251 Introduction to Probabilities}{\\20/21 Autumn, 21/22 Spring, 22/23 Spring}
+\resumeItem{STAT24300 Numerical Linear Algebra}{\\ 22/23 Winter}
+\resumeItem{MATH185 Mathematical Methods in the Physical Sciences (III, ODE)}{\\21/22 Winter}
+      \resumeItemListEnd
+	\resumeSubheading{The University of Hong Kong}{}{Tutor of undergraduate courses}{2016-2020}
+	  \resumeItemListStart
+	  \resumeItem{Certificate}{I was awarded the Certificate of Teaching and Learning in Higher Education from HKU Center of the Enhancement of Teaching and Learning  in 2016.}
+	  \resumeItem{MATH3601 Numrical analysis:}{18/19 Fall, 19/20 Fall}
+	  \resumeItem{MATH4602 Scientific computing:}{17/18 Spring, 18/19 Spring}
+	  \resumeItem{MATH2014 Multivariable calculus and linear algebra:}{17/18 Fall}
+	  \resumeItem{MATH1009 Basic mathematics for business and economics:}{16/17 Fall, 17/18 Fall}
+	  \resumeItemListEnd
+	  \resumeItem{Co-Supervising Students}{}
+	  \vspace{-5pt}
+	  \resumeItemListStart
+	  \resumeItem{Boyi Hu}{with Zhiwen Zhang}
+	  \resumeItem{Rapha\"{e}l Terrine}{with Guillaume Bal}
+	  \resumeItem{Tan Zhang}{with Zhiwen Zhang}
+	  \resumeItem{Binglu Chen}{with Guillaume Bal}
+	  \resumeItemListEnd
+	\resumeSubHeadingListEnd
+		\vspace{-5pt}
+		\section{Visiting Experiences}
+		\resumeSubHeadingListStart
+		\resumeSubheading{Tsinghua University}{Beijing}
+		{Visiting Ph.D. Student, hosted by Professor Steven Shing Tung Yau}{2018.11-19.1}
+		
+		\resumeSubheading{California Institute of Technology}{Pasadena}
+		{Visiting Ph.D. Student, hosted by Professor Thomas Hou}{2018.4-5}
+		
+		\resumeSubheading{Ecole Normale Superieure}{Paris}
+		{For Bachelor Thesis, supervised by Professor Espen Robstad Jakobsen}{2016.1-6}
+		
+		\resumeSubheading{University of Oxford}{Oxford}{Tsinghua University Distinguished Newcomer Student Leadership Program}{2013.\ 7}
+		
+		\resumeSubHeadingListEnd
+\section{Research Presentations}
+	\resumeSubHeadingListStart
+		\resumeItem{DeepParticle: learning measure by a deep neural network minimizing Wasserstein distance on data generated from interacting particle methods}{ }
+	\vspace{-2pt}
+	\resumeItemListStart
+					\resumeSubItem{}{Math Colloquium, CMU} {Pittsburgh, 2023.\ 1}
+					\resumeSubItem{}{Math Colloquium, LSU} {Baton Rouge, 2023.\ 1}
+					\resumeSubItem{}{Applied Math Colloquium, FSU} {Tallahassee, 2023.\ 1}
+				\resumeSubItem{}{Math Colloquium, SIT} {Hoboken, 2022.12}
+					\resumeSubItem{}{Applied Math Colloquium, CUHK} {Remote, 2022.12}
+					\resumeSubItem{}{Math Seminar, HKUST} {Remote, 2022.12}
+	\resumeSubItem{}{Research Seminar, NTU} {Singapore, 2022.12}
+	\resumeSubItem{}{Young Mathematician Workshop on Computational and Applied Mathematics, BiCMR} {Remote, 2022.11}
+	\resumeSubItem{}{CAM Research Seminar, YMSC} {Remote, 2022.11}
+	\resumeSubItem{}{Applied Mathematics Seminar, IIT} {Chicago, 2022.\ 7}
+	\resumeSubItem{}{Applied Mathematics Seminar, SusTech} {Remote, 2022.\ 7}
+	\resumeItemListEnd
+	\resumeItem{Tensor train method for high-dimensional nonlinear filtering problems}{ }
+	\vspace{-2pt}
+	  \resumeItemListStart
+	  \resumeSubItem{}{SIAM Conference on Uncertainty Quantification (UQ22)} {Atlanta, 2022.\ 4}
+	  	  \resumeItemListEnd
+	\resumeItem{A convergent interacting particle method and computation of KPP front speeds}{ }
+		\vspace{-2pt}
+	 \resumeItemListStart
+	\resumeSubItem{}{CCAM Seminar, Purdue University}{IN, 2021.11}
+	\resumeSubItem{}{Applied Math Seminar, BUAA}{Beijing, 2021.11}
+	\resumeItemListEnd
+	\resumeItem{A Robust Lagrangian Scheme in Computing Effective Diffusivities}{ }
+		\vspace{-2pt}
+		 \resumeItemListStart
+	\resumeSubItem{}{Applied Mathematics Seminar, IIT}{Chicago, 2020.12}
+		\resumeSubItem{}{CAM Colloquium, UChicago}{Chicago, 2020.10}
+	\resumeSubItem{}{Applied Mathematics Seminar, Cermics ENPC}{Paris, 2020.\ 3}
+	\resumeSubItem{}{Special Applied Mathematics Colloquium, Columbia University}{New York, 2020.\ 1}
+	\resumeItem{}{\hspace{-6pt} posters: International Congress on Industrial and Applied Mathematics (ICIAM 2019), Valencia, 2019.\ 7; SIAM Conference on Computational Science and Engineering (CSE19), Spokane, 2019.2; The 12th AIMS Conference on Dynamical Systems, Differential Equations and Applications, Taibei, 2018.7; IPAM Workshop IV of Complex High-Dimensional Energy Landscape, Los Angeles, 2017.11}
+	\resumeItemListEnd
+	\resumeItem{POD method to nonlinear filtering problems in medium-high dimension}{ }
+		\vspace{-2pt}
+	\resumeItemListStart
+	\resumeSubItem{}{The 8th International Congress of Chinese Mathematicians (ICCM 2019)}{Beijing, 2019.\ 6}
+		\resumeItemListEnd
+	\resumeItem{A new mesh-free method for PDE with discontinuous coeffcients using the deep learning approach}{}
+		\vspace{-2pt}
+			 \resumeItemListStart
+	\resumeItem{}{\hspace{-6pt} poster: Big Data Challenges for Predictive Modeling of Complex Systems, Hong Kong, 2018.11}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\section{Professional Service}
+		 \resumeSubHeadingListStart
+		 	\resumeSubItem{Faculty Sponsor }{CAM Grad Student Seminar}{Chicago, 2021.1-3}
+	\resumeSubItem{Co-organizer }{Big Data Challenges for Predictive Modeling of Complex Systems}{HK, 2018.11}
+	\resumeSubItem{Journal Referee}{}{}
+	
+	{Computers and Mathematics with Applications, Journal of Computational Physics, IEEE Conference on Decision and Control}
+	\resumeSubItem{Memberships }{IEEE, SIAM}{}
+	\resumeSubHeadingListEnd
+\end{document}
+\section{Reference letters}
+\resumeSubHeadingListStart
+\resumeSubItem{Guillaume Bal }{University of Chicago, guillaumebal@uchicago.edu}{}
+\resumeSubItem{Jeremy Hoskins }{University of Chicago, jeremyhoskins@uchicago.edu}{}
+\resumeSubItem{Thomas Hou }{California Institute of Technology, hou@cms.caltech.edu}{}
+\resumeSubItem{Mary Silber }{University of Chicago, msilber@uchicago.edu}{(teaching)}
+\resumeSubItem{Jack Xin }{University of California, Irvine, jxin@math.uci.edu}{}
+\resumeSubItem{Zhiwen Zhang }{University of Hong Kong, zhangzw@hku.hk}{}
+\resumeSubHeadingListEnd

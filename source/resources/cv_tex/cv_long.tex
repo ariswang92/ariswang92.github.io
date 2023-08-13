@@ -1,0 +1,159 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[11pt,a4paper]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[margin=3cm,a4paper]{geometry}
+
+% avoid more warning
+\usepackage{textcomp}
+
+
+%\usepackage[english]{babel}
+
+% pubilication counter
+% customize the enumerate environments (i.e. enumerate, itemize, ...)
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% A custom version of the enumerate environment that sets the appropriate left margin 
+\newlist{cvenumerate}{enumerate}{0}
+\setlist[cvenumerate]{label=\arabic*.,%
+	leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
+% replace section style
+\let\oldsection\section
+\renewcommand{\section}[1]{\oldsection{\uppercase{#1}}}
+
+%----------------------------------------------------------------------------------
+%            personal data
+%----------------------------------------------------------------------------------
+\firstname{Zhongjian}
+\familyname{Wang}
+%\title{}
+%\address{5747 S Ellis Avenue, Chicago, IL 60637, USA CCAM, Rm 309}      % optional, remove/comment the line if not wanted; the "country" arguments can be omitted or provided empty
+%\mobile{+852-59896813}                          % optional, remove/comment the line if not wanted
+\phone{+1-773-702-5043}                           % optional, remove/comment the line if not wanted
+%\fax{fax number}                             % optional, remove/comment the line if not wanted
+\email{aris1992@outlook.com}                               % optional, remove/comment the line if not wanted
+\homepage{www.wangzhongjian.com}
+% optional, remove/comment the line if not wanted
+\extrainfo{5747 S Ellis Avenue, Rm 309, Chicago, IL 60637, USA}                 % optional, remove/comment the line if not wanted
+
+%\photo[64pt][0pt]{wang_square}                       % 
+
+%optional, uncomment the line if wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{some quote}                                 % optional, remove/comment the line if not wanted
+%
+\begin{document}
+%\begin{CJK}{UTF8}{gbsn}  
+%-----       resume       ---------------------------------------------------------
+\maketitle
+\section{Employment}
+\cventry{2020--}{William H. Kruskal Instructor}{Department of Statistics and CCAM,
+	 The University of Chicago}{Chicago}{}{Mentor: Prof. Guillaume Bal}
+\section{Education}
+\cventry{2016--2020}{Doctor of Philosophy}{Department of Mathematics, The University of Hong Kong}{Hong Kong}{}{Supervisor: Dr. Zhang Zhiwen, Thesis title:  Robust Lagrangian Numerical Schemes in Computing Effective Diffusivities for Chaotic and Random Flows}
+\cventry{2012--2016}{Bachelor of Science}{Department of Mathematical Sciences, Tsinghua University}{Beijing}{}{}  %
+\section{Visiting Experiences}
+\cventry{2018.11-19.1}{Visiting Ph.D. Student}{Tsinghua University}{Beijing}{}{hosted by Professor Steven Shing Tung Yau}
+\cventry{2018.4-5}{Visiting Ph.D. Student}{California Institute of Technology}{Pasadena}{}{hosted by Professor Thomas Hou}
+\cventry{2016.1-6}{Exchange Student}{Ecole Normale Superieure}{Paris}{}{For Bachelor Thesis, supervised by Professor Espen Robstad Jakobsen}
+\cventry{2013.7}{Visitor}{University of Oxford}{Oxford}{}{Tsinghua University Distinguished Newcomer Student Leadership Program}
+\section{Awards and Scholarships}
+%\cventry{year--year}{degree or job title}{institution or employer}{city}{grade}{description}
+\cventry{2021}{Best PhD thesis Award}{Hong Kong Mathematical Society}{}{}{}
+\cventry{2020}{Student Travel Award for UQ20}{Society for Industrial and Applied Mathematics}{}{}{}
+\cventry{2019}{Doris Chen Postgraduate Travel Grant}{Department of Mathematics, HKU}{}{}{}
+\cventry{2019}{Student Travel Award for CSE19}{Society for Industrial and Applied Mathematics}{}{}{}
+\cventry{2018}{Pilot Scheme on International Experience}{Faculty of Science, HKU}{}{}{}
+\cventry{2017}{IPAM Student Travel Support}{Institute for Pure \& Applied Mathematics, UCLA}{}{}{}
+\cventry{2016}{Hong Kong Ph.D. Fellowship}{Research Grants Council}{}{}{}
+\cventry{2013}{Scholarship for Academic Excellence}{Tsinghua University}{}{}{}
+\cventry{2012}{Gold Medalist}{China Mathematics Olympiad}{}{}{}
+\section{Research Interests}
+\cvitem{}{Applied analysis and computational methods for physics and engineering problems, including but not limited to,}
+\cvlistitem{\textbf{homogenization problems:} effective diffusion in periodic, random flows; convection enhancement in the large P\'{e}clet regime; KPP front wave speed.}
+\cvlistitem{\textbf{reduced order models:} non-linear filtering, uniform accuracy schemes in time integration, neural network.}
+\section{Publications and Preprints}
+\begin{enumerate}
+	\item{DeepParticle: learning invariant measure by a deep neural network minimizing Wasserstein distance on data generated from an interacting particle method \textsl{(submitted to JCP, with Xin, J., Zhang, Z.)}}
+	\item{A data-driven model reduction method for parabolic inverse source problems and its convergence analysis \textsl{(submitted to Inverse Problem, Wang Z., Zhang W., Zhang Z.}}
+	\item{A robust stochastic structure-preserving Lagrangian scheme in computing effective diffusivity of 3D time-dependent flows  \textsl{(submitted to ESAIM:M2NA, with Xin, J., Zhang, Z.)}}
+	\item{Tensor train method for high-dimensional nonlinearfiltering problems  \textsl{(submitted to IEEE TAC, with Li, S., Yau, S. S. T., Zhang, Z.)}}
+	\item{A class of robust numerical methods for solving dynamical systems with multiple time scales  \textsl{(submitted to IMA J NA, with T. Hou, Zhang, Z.)}}
+	\item{Wang, Z., Lyu, J., Xin, J., Zhang, Z., A convergent interacting particle method and computation of KPP front speeds in chaotic flows \textsl{(Accepted by SINUM.)}}
+	\item{Wang, Z., Xin, J., Zhang, Z., Sharp uniform in time error estimate on a stochastic structure-preserving Lagrangian method and computation of effective diffusivity in 3D chaotic flows, Multiscale Model and Simulation, 19 (2021), no. 3, 1167–1189}
+	\item{Wang, Z., Lyu, J., Xin, J., Zhang, Z.., Convergence of stochastic structure-preserving schemes for computing effective diffusivity in random flows, SIAM Journal on Numerical Analysis, 58 (2020), no. 5, 3040–3067. .}
+	\item{Wang, Z., Zhang, Z., A new mesh-free method for PDE with discontinuous coeffcients using the deep learning approach,  Journal of Computational Physics, 400 (2020), 108963.}
+	\item{Wang, Z. Luo, X., Yau, S. S. T., Zhang, Z., Proper orthogonal decomposition method to nonlinear filtering problems in medium-high dimension, IEEE Transactions on Automatic Control, 65 (2020), no. 4, 1613–1624.}
+	\item{Wang, Z., Xin, J., Zhang, Z.,  Computing Effective Diffusivity of Chaotic and Stochastic Flows Using Structure-Preserving Schemes. SIAM Journal on Numerical Analysis, 56(4), 2322-2344.}
+\end{enumerate}
+\section{Teaching Experiences}
+\begin{itemize}
+	\item at \textbf{The University of Chicago}\\
+	\cvitem{21/22 Spring}{Lecturer of STAT251 Introduction to Probabilities}
+\cvitem{21/22 Winter}{Lecturer of MATH185 Mathematical Methods in the Physical Sciences (III: ODE and Fourier Transform)}
+\cvitem{21/22 Winter}{Lecturer of STAT31120 Numerical Methods for Stochastic Differential Equations}
+\cvitem{20/21 Spring}{Lecturer of STAT31120 Numerical Methods for Stochastic Differential Equations}
+\cvitem{20/21 Autumn}{Lecturer of STAT251 Introduction to Probabilities}
+	\item at \textbf{The University of Hong Kong}\\
+\cvitem{Certificate}{I was awarded the Certificate of Teaching and Learning in Higher Education from HKU Center of the Enhancement of Teaching and Learning  in 2016.}
+\cvitem{19/20 Fall}{Tutor of MATH3601 Numrical analysis, MATH3401 Analysis.}
+\cvitem{18/19 Spring}{Tutor of MATH4602 Scientific computing.}
+\cvitem{18/19 Fall}{Tutor of MATH3601 Numerical analysis.}
+\cvitem{17/18 Spring}{Tutor of MATH4602 Scientific computing.}
+\cvitem{17/18 Fall}{Tutor of MATH2014 Multivariable calculus and linear algebra, MATH1009 Basic mathematics for business and economics.}
+\cvitem{16/17 Fall}{Tutor of MATH1009 Basic mathematics for business and economics.}
+\end{itemize}
+\section{Research Presentations}
+\begin{itemize}
+		\item \textbf{Tensor train method for high-dimensional nonlinearfiltering problems}\\
+		\cvitem{2022.4}{SIAM Conference on Uncertainty Quantification (UQ22), Atlanta}
+	\item \textbf{A convergent interacting particle method and computation of KPP front speeds}\\
+	\cvitem{2021.11}{CCAM Seminar, Purdue University, IN}
+	\cvitem{2021.11}{Applied Math Seminar, BUAA, Beijing}
+	\item	\textbf{A Robust Lagrangian Scheme in Computing Effective Diffusivities}\\
+	\cvitem{2020.12}{Applied Mathematics Seminar, IIT, Chicago}
+	\cvitem{2020.3}{Applied Mathematics Seminar, Cermics ENPC, Paris}
+	\cvitem{2020.1}{Special Applied Mathematics Colloquium, Columbia University, New York}
+	\cvitem{2019.7}{ International Congress on Industrial and Applied Mathematics (ICIAM 2019), Valencia}
+	\cvitem{2019.2}{\textsl{(poster)} SIAM Conference on Computational Science and Engineering (CSE19), Spokane}
+	\cvitem{2018.7}{\textsl{(poster)} The 12th AIMS Conference on Dynamical Systems, Differential Equations and Applications, Taibei}
+	\cvitem{2017.11}{\textsl{(poster)}  IPAM Workshop IV of Complex High-Dimensional Energy Landscape, Los Angeles}
+	\item \textbf{A new mesh-free method for PDE with discontinuous coeffcients using the deep learning approach}\\
+	\cvitem{2018.11}{\textsl{(poster)} Big Data Challenges for Predictive Modeling of Complex Systems, Hong Kong}
+	\item \textbf{POD method to nonlinear filtering problems in medium-high dimension}\\
+	\cvitem{2019.6}{The 8th International Congress of Chinese Mathematicians (ICCM 2019), Beijing}
+\end{itemize}
+\end{document}
+
+\subsection{Participant}
+\begin{tabbing}
+	\hspace{3em}\=\hspace{33em}\=\kill
+2019\>China Society for Industrial and Applied Mathematics Annual Meeting  \>Foshan \\ 
+	\>Advanced Numerical Methods for Scientific Computation (ANMSC2019)  \>Shenzhen \\
+2018\>SIAM Conference on Uncertainty Quantification (UQ18)  \>Garden Grove \\ 
+2017\>The 10th International Conference on Computational Physics (ICCP 10)  \>Macau \\ 
+	\>Tsinghua workshop on SPDE and UQ  \>Beijing \\ 
+	\>SIAM Conference on Computational Science and Engineering (CSE17)  \>Atlanta 
+\end{tabbing} 
+\section{Letters of Recommendations}
+\begin{tabbing}
+	\hspace{7em}\=\hspace{20em}\=\kill
+	Research	\>Jack Xin \>University of California, Irvine \\ 
+	Research	\>Thomas Y. Hou \>California Institute of Technology \\ 
+	Research	\>Stephen S.-T. Yau \>Tsinghua University \\ 
+	Research	\>Zhiwen Zhang \>University of Hong Kong \\ 
+	Research	\>Yalchin Efendiev \> Texas A\&M University\\ 
+	Teaching	\> Guangyue Han  \> University of Hong Kong
+\end{tabbing} 
+%.
+
+
+%\section{Miscellaneous}
+%\cvitem{Service}{Postgraduate student representative and member of adviosry committe of Lap-Chee College (LCC), HKU (18/19). Team leader of LCC High Table subcommittee.}
+%\cvitem{Sports}{Football lover, founder of CSSA football team in HKU. Water sports beginner, kayak, windsurfing...}
+
+\clearpage%
+%\end{CJK}

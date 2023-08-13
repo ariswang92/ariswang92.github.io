@@ -1,0 +1,133 @@
+\documentclass[10pt,psamsfonts,reqno,oneside,letterpaper]{amsart}
+\usepackage[dvips,text={6.5truein,9truein},left=1truein,top=1truein]{geometry}
+\usepackage{amssymb,amsmath,amscd,enumerate}
+\usepackage{amscd}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,pdfstartview=FitH]{hyperref}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+% Uncomment to use syncing
+
+%\usepackage{pdfsync}
+
+
+% Paragraphs
+\parindent=0pt
+\parskip=5 pt plus 2 pt minus 1pt
+
+%color shortcuts
+\usepackage{color}
+\newcommand\change[1]{{\color{red}#1}}
+\newcommand\delete[1]{{\color{green}#1}}
+\newcommand\comment[1]{{\color{blue}#1\color{black}}}
+
+\newcommand{\xdownarrow}[1]{%
+	{\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+%other shortcuts
+\newcommand\Z{{\mathbb Z}}
+\newcommand\N{{\mathbb N}}
+\newcommand\C{{\mathbb C}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\id{{\mathrm{id}}}
+\newcommand\im{{\mathrm{im}}}
+
+\begin{document}
+	
+	
+	\section*{Math 18500 - Problem Set 3}
+	\begin{enumerate}[I]
+	\item For each homogeneous system of linear equations:
+	\begin{enumerate}[(1)]
+		\item Write the system in matrix form.
+		\item Determine the initial velocity of the solution with initial values $(x(0), y(0)) = (1,0)$. \\
+		\textit{Do not find this solution, just determine its initial velocity based on the velocity field.}
+		\item Find the general solution of the system.
+		\item Roughly sketch a few solutions of the system which exhibit all possible different behaviors.  Make sure that the solution starting at $(1,0)$ has a direction which is consistent with the velocity you calculated in step (2). \\
+		\textit{You can use a computer to check your work, but do the sketch by hand first.}
+		\item Find the solution with initial values $(x(0),y(0)) = (1,0)$ explicitly.
+	\end{enumerate}
+	
+	\begin{center}
+		\begin{tabular}{lll}
+			\textbf{a}. $\left \{ \begin{array}{l} x' = 9x - 2y \\ y' = -2x + 6y \end{array} \right. $ &
+			\textbf{b}. $\left \{ \begin{array}{l} x' = - x + y  \\ y' = - 2x - 4y \end{array} \right.$ &
+			\textbf{c}. $\left \{ \begin{array}{l} x' = 2x + 4y   \\ y' = x - y  \end{array} \right.$ \\ \\
+			\textbf{d}. $\left \{ \begin{array}{l} x' = - x + 4y \\ y' = - 4x - y  \end{array} \right.$ &
+			\textbf{e}. $\left \{ \begin{array}{l} x' = x - 2y \\ y' = x - y \end{array} \right. $ &
+			\textbf{f}. $\left \{ \begin{array}{l} x' = x - y \\ y' = - x + y \end{array} \right. $ 
+			%\textbf{f}. $\left \{ \begin{array}{l} x' =  -2x + 5y   \\ y' = -2x + 4y  \end{array} \right.$ 
+		\end{tabular}
+	\end{center}
+	\textit{Hint: For $\textbf{f}$, you may use a computer if you don't know how to make a good sketch.   But once you see the solutions on the computer, try to explain why they look that way, based on the form of your solution.}
+	
+	\item Consider the inhomogeneous system of linear equations
+	\[ \left \{ \begin{array}{rcl} \dfrac{dx}{dt} &=& 1 - x \\ \\
+		\dfrac{dy}{dt} &=& x - y - 2\end{array} \right. \]
+	\begin{enumerate}
+		\item Write the system in matrix form, 
+		\[ \frac{d \vec{x}}{dt} = A \vec{x} + \vec{b} \]
+		and show that the matrix $A$ does not have an eigenbasis (real or complex).  Therefore, our standard methods will not apply to this system and we will be forced to use a different method to solve it.
+		\item Find the equilibrium point of the system.
+		\item Find the general solution of the corresponding homogeneous system, 
+		\[ \frac{d \vec{x}_h}{dt} = A \vec{x}_h. \]
+		\textit{Hint: First solve for $x_h$ using the equation which does not involve $y_h$.  Then plug the result in to the other equation, and solve for $y_h$.} 
+		\item Find the general solution of the original (inhomogeneous) system.
+		\item Based on your solution, is the equilibrium stable or unstable?  In other words, do the solutions tend towards the equilibrium point as $t \to \infty$, or do they tend away from it?
+		\item Use the following tool to plot the solutions and see what they look like:
+		\begin{center} \url{https://homepages.bluffton.edu/~nesterd/apps/slopefields.html} \end{center}
+		Click around to see a number of solutions and make a sketch of what you see on the computer. 
+	\end{enumerate}
+	
+	\item A standard technique for studying equilibrium points of nonlinear systems of ODE,
+	\[ x' = P(x,y) \]
+	\[ y' = Q(x,y) \]
+	is to use \emph{linear approximations} of the components of the velocity field:
+	\[  P(x,y) \approx P(x_0,y_0) + P_x(x_0,y_0) (x-x_0) + P_y(x_0,y_0) (y-y_0) \]
+	\[  Q(x,y) \approx Q(x_0,y_0) + Q_x(x_0,y_0)  (x-x_0) + Q_y(x_0,y_0) (y-y_0). \]
+	In the vicinity of an equilibrium point (i.e. a point where $P(x_0,y_0) = Q(x_0,y_0) = 0$), solutions of the \emph{linearized system} 
+	\[ x' = P_x(x_0,y_0) (x-x_0) + P_y(x_0,y_0) (y-y_0)  \]
+	\[ y' = Q_x(x_0,y_0)  (x-x_0) + Q_y(x_0,y_0) (y-y_0)\]
+	are accurate approximations of the solutions of the nonlinear system (during any interval of time in which the solution remains close to the equilibrium).
+	\begin{enumerate}
+		\item Consider the nonlinear system of differential equations 
+		\[ x'  = x^2 - y^2 + 3 = P(x,y) \]
+		\[ y'  = 5 - x^2 - y^2  = Q(x,y). \]
+		Identify all equilibrium points of the system, by setting $x' = y' = 0$. \\
+		\textit{You should find a total of four equilibrium points.}
+		\item Make a schematic sketch of the velocity field of the system, by carrying out the following steps:
+		\begin{enumerate}
+			\item Draw the \textit{nullclines}.  These are the isoclines where the velocity field has slope $0$ or $\infty$.  Equivalently, they are the curves along which one component of the velocity is zero ($P = 0$ or $Q = 0$). 
+			\textit{Note: The equilibrium points should be located where the nullclines intersect.}
+		\item The nullclines divide the $xy$ plane into several regions.  For each region, determine whether $P$ and $Q$ are positive or negative in the region, and draw a vector in the region which is consistent with these signs (e.g. up and to the right, if $P>0$ and $Q>0$). \\
+			\textit{Tip: First evaluate the velocity field at the point $(0,0)$, and draw this vector in your picture.}
+		\item Draw velocity vectors of the correct direction along the nullclines (e.g. up, if $P=0\textrm{ and }Q>0$).  The vectors you draw will have different directions along different segments of each nullcline - make sure that they are consistent with the vectors you have drawn in the neighboring regions.
+		\end{enumerate}
+		
+		\item For each equilibrium point you found in part \textbf{a}, write down the corresponding linearized system, and convert it into matrix form. \\
+		\textit{Tip: First write out general formulas for $P_x$, $P_y$, $Q_x$, and $Q_y$, then plug in the equilibrium points.}
+		\item  For each linearized system you wrote down in part \textbf{c}, does it have real or complex eigenvalues? 
+		\item For each linearized system you wrote down in part \textbf{c}, is it stable or unstable? \\
+		\textit{Note: Because solutions of the linearized system approximate solutions of the nonlinear system, this tells you whether the corresponding equilibrium of the nonlinear system is stable or unstable.}
+		\item  Use the following tool to visualize the solutions of the system:
+		\begin{center} \url{https://homepages.bluffton.edu/~nesterd/apps/slopefields.html} \end{center} 
+		Click around to see what solutions do when they start near each equilibrium point.  Is their long-term behavior consistent with your solution of part \textbf{e}?  Explain.  Visually speaking, what is the difference between the equilibria where the linearization has real vs. complex eigenvalues? 
+	\end{enumerate}
+	\end{enumerate}	
+\end{document} 
+
+
+
+

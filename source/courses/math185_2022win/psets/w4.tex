@@ -1,0 +1,135 @@
+\documentclass[10pt,psamsfonts,reqno,oneside,letterpaper]{amsart}
+\usepackage[dvips,text={6.5truein,9truein},left=1truein,top=1truein]{geometry}
+\usepackage{amssymb,amsmath,amscd,enumerate}
+\usepackage{amscd}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,pdfstartview=FitH]{hyperref}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+% Uncomment to use syncing
+
+%\usepackage{pdfsync}
+
+
+% Paragraphs
+\parindent=0pt
+\parskip=5 pt plus 2 pt minus 1pt
+
+%color shortcuts
+\usepackage{color}
+\newcommand\change[1]{{\color{red}#1}}
+\newcommand\delete[1]{{\color{green}#1}}
+\newcommand\comment[1]{{\color{blue}#1\color{black}}}
+
+\newcommand{\xdownarrow}[1]{%
+	{\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+%other shortcuts
+\newcommand\Z{{\mathbb Z}}
+\newcommand\N{{\mathbb N}}
+\newcommand\C{{\mathbb C}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\id{{\mathrm{id}}}
+\newcommand\im{{\mathrm{im}}}
+
+\begin{document}
+	
+	
+	\section*{Math 18500 - Problem Set 4}
+	\begin{enumerate}[I]
+\item Solve the following initial value problems using the ``exponential ansatz'' method:
+	\begin{enumerate}
+		\item Substitute $y = e^{\lambda t}$ and find all values of $\lambda$ which satisfy the equation.  If two real values of $\lambda$ are possible, then you obtain two real exponential solutions and can proceed to step (3).  
+		\item If you get a complex value of $\lambda$, find the real and imaginary part of $e^{\lambda t}$.  These are both real solutions of the equation - take them and proceed to step (3). 
+		\item Apply the superposition principle and obtain the general solution as a linear combination of the two real solutions you have found so far.
+		\item Find the coefficients of the linear combination which satisfy the given initial conditions.
+	\end{enumerate}
+	\begin{enumerate}
+		\item[\textbf{a}.] $y'' + 2y' - 15 y = 0 \;, \; \; y(0) = 3 \; ,  \; \; y'(0) = 2 $
+		\item[\textbf{b}.] $y'' + y' = 0 \; , \; \; y(0) = 0 \; , \; \; y'(0) = -2$
+		\item[\textbf{c}.] $y'' + 2y' + 2y = 0 \; , \; \; y(\pi) = 0 \; , \; \; y'(\pi) = 1$
+	\end{enumerate}
+	
+\item Consider the equations 
+	\[ y'' + 6y' + 9y = 0 \; , \; \;  y'' - 3y' +2y = 0 \]
+	\begin{enumerate}
+		\item[\textbf{a}.] Write each ODE in operator form as 
+		\[ (D^2 + aD + b)y = 0, \]
+		where the operator $D$ is defined by $Dy = y'$, and $D^2$ means ``apply $D$ twice in a row''.  In each case, find a factorization
+		\[ D^2 + aD + b = (D-\lambda_1)(D-\lambda_2). \]
+		\item[\textbf{b}.] For one equation, you should have $\lambda_1 \neq \lambda_2$.  In this case, show that the order in which you apply the operators $D- \lambda_1$ and $D -\lambda_2$ doesn't matter.  In other words,
+		\[ (D-\lambda_1)(D-\lambda_2)y = (D-\lambda_2)(D-\lambda_1)y. \]
+		\item[\textbf{c}.] For the other equation you should have $\lambda_1 = \lambda_2$.  Find the general solution by repeated integration.
+	\end{enumerate}
+\item It is often useful to consider second order equations with \emph{boundary conditions}, where instead of specifying initial values $y(t_0)$ and $y'(t_0)$ we specify values $y(t_0)$ and $y(t_1)$ at an initial time $t_0$ and a final time $t_1$.  Problems of this form are called \emph{boundary value problems}. \\ \\
+	To find all solutions of a boundary value problem, you just produce the general solution of the equation in terms of two unpecified coefficients $c_1$ and $c_2$, and then substitute the times $t_0$ and $t_1$.  This gives you a system of equations which you can try to solve for $c_1$ and $c_2$. \\ \\ 
+	However, solutions of boundary value problems are not guaranteed to exist, and sometimes a boundary value problem will have more than one solution!   The following problem illustrates that phenomenon.
+	\begin{enumerate}
+		\item[\textbf{a}.] Find the unique solution of the boundary value problem
+		\[ y'' - 4y = 0 \; , \; \; y(0) = 0 \; , \; \; y(\ln(2)) = 15 \] 
+		\item[\textbf{b}.] Find an infinite number of solutions of the boundary value problem 
+		\[ y'' + 4 y = 0 \; , \; \; y(0) = 0 \; , \; \; y(\pi) = 0 \]
+		\item[\textbf{c}.] Show that the boundary value problem
+		\[ y'' + 4 y = 0 \; , \; \; y(0) = 0 \; , \; \; y(\pi) = 1 \]
+		has no solution.
+		\item[\textbf{d}.] (\textit{Optional}) In general, what conditions on $t_0$, $t_1$, $y_0$, $y_1$, and $k$ are needed in order to guarantee that the boundary value problem
+		\[ y'' + ky = 0 \; , \; \; y(t_0) = y_0 \; , \; \; y(t_1) = y_1 \]
+		has exactly one solution? 
+	\end{enumerate}
+	
+\item Consider the \emph{third order} linear homogeneous equation
+	\[ y''' + y'' + y' + y = 0 \]
+	\begin{enumerate}
+		\item[\textbf{a}.] Find all of the exponential solutions of this equation (real and complex). \\
+		\textit{Hint: For all values of $a$ and $b$ we have the factorization $y^3 + ay^2 + by + ab = (y+a)(y^2+b)$. }
+		\item[\textbf{b}.] For each complex exponential solution, show that its real and imaginary parts are also solutions. 
+		\item[\textbf{c}.] In parts $\textbf{a}$ and $\textbf{b}$ you should have obtained three real solutions $y_1(t)$, $y_2(t)$, $y_3(t)$.  If $c_1$, $c_2$, $c_3$ are arbitrary real constants, show that the linear combination $y = c_1 y_1 + c_2 y_2 + c_3 y_3$ is also a solution.
+		\item[\textbf{d}.] Solve the initial value problem 
+		\[ y''' + y'' + y' + y = 0 \; , \; \; y(0) = 2 \; , \; \; y'(0) = 1\; , \; \; y''(0) = 0 \]
+	\end{enumerate}
+	
+\item Consider a damped oscillator which is modelled by an equation
+	\[ my'' + ly' + ky = 0 \] 
+	where $m = 2$, $k = 4$, and $l \geq 0$.
+	\begin{enumerate}
+		\item[\textbf{a}.] Write the auxiliary equation and express its roots in terms of $l$.
+		\item[\textbf{b}.] In the absence of damping $(l = 0)$, find a positive value of $\omega_0$ such that the general solution of the equation is a linear combination of $\sin(\omega_0 t)$ and $\cos(\omega_0 t)$. \\
+		\textit{Recall that $\omega_0$ is called the \emph{natural frequency} of the oscillator.}
+		\item[\textbf{c}.] Recall that an oscillator is said to be \emph{overdamped} if its solutions take the form 
+		\[ y = c_1 e^{-\mu_1 t} + c_2 e^{-\mu_2 t} \]
+		where $\mu_1$ and $\mu_2$ are distinct positive real numbers.  For an overdamped oscillator, give a formula (in terms of $\mu_1$ and $\mu_2$) for the solution which satisfies the initial conditions $y(0) = 0$ and $y'(0) = 1$. 
+		\item[\textbf{d}.] Recall that an oscillator is said to be \emph{underdamped} if its solutions take the form 
+		\[ y = c_1 e^{-\mu t} \cos(\omega t) + c_2 e^{-\mu t} \sin(\omega t) \]
+		where $\mu$ and $\omega$ are positive real numbers.  For an underdamped oscillator, give a formula (in terms of $\mu$ and $\omega$) for the solution which satisfies the initial conditions $y(0) = 0$ and $y'(0) = 1$. 
+		\item[\textbf{e}.] Recall that an oscillator is said to be \emph{critically damped} if its solutions take the form
+		\[ y = c_1 t e^{-\mu t} + c_2 e^{-\mu t} \]
+		where $\mu$ is a positive real number.  For a critically damped oscillator, give a formula (in terms of $\mu$) for the solution satisfying the initial conditions $y(0) = 0$ and $y'(0) = 1$. 
+		\item[\textbf{f}.] For which values of $l$ is the oscillator overdamped, underdamped, and critically damped?  In each of these cases, give formulas for $\mu_1$, $\mu_2$, $\mu$, $\omega$ (whichever is applicable) in terms of $l$. 
+		\item[\textbf{g}.] In the underdamped case, is $\omega$ greater or less than the natural frequency $\omega_0$?
+		\item[\textbf{h}.] In the cases $l = 4$ and $l =6$, and also in the critically damped case, find the solution satisfying $y(0) = 0$ and $y'(0) = 1$.
+		\item[\textbf{i}.] Carefully plot each of the solutions from part \textbf{h}.  In the overdamped and critically damped cases, find the point in time where the solution achieves its maximum value and mark this in your plot.   In the underdamped case, mark the points where the solution touches its ``exponential envelope'' and where it crosses the $t$ axis.   
+		\item[\textbf{k}.] What happens if $l<0$?  Plot a few possible solutions in this case and explain why the equation
+		\[ my'' + ly' + ky = 0 \]
+		would not correspond to a realistic model of any physical system.
+	\end{enumerate}
+	
+	
+	
+	\end{enumerate}	
+\end{document} 
+
+
+
+

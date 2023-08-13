@@ -1,0 +1,131 @@
+\documentclass[10pt,psamsfonts,reqno,oneside,letterpaper]{amsart}
+\usepackage[dvips,text={6.5truein,9truein},left=1truein,top=1truein]{geometry}
+\usepackage{amssymb,amsmath,amscd,enumerate}
+\usepackage{amscd}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,pdfstartview=FitH]{hyperref}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+% Uncomment to use syncing
+
+%\usepackage{pdfsync}
+
+
+% Paragraphs
+\parindent=0pt
+\parskip=5 pt plus 2 pt minus 1pt
+
+%color shortcuts
+\usepackage{color}
+\newcommand\change[1]{{\color{red}#1}}
+\newcommand\delete[1]{{\color{green}#1}}
+\newcommand\comment[1]{{\color{blue}#1\color{black}}}
+
+\newcommand{\xdownarrow}[1]{%
+	{\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+%other shortcuts
+\newcommand\Z{{\mathbb Z}}
+\newcommand\N{{\mathbb N}}
+\newcommand\C{{\mathbb C}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\id{{\mathrm{id}}}
+\newcommand\im{{\mathrm{im}}}
+
+\begin{document}
+	
+	\author{Lucas Culler}
+	
+	\section*{Math 18500 - Problem Set 2}
+	\begin{enumerate}
+		%Q:
+		\item Solve the following initial value problems using integrating factors.  In each case, you should give a formula for the general solution in terms of an unspecified constant $C$, and then find the value of $C$ which results in a solution of the given initial value problem. 
+		\begin{enumerate}
+			\item  $y' = y - x + 1 \;, \; \; y(0) = 1$.
+			\item  $y' = 2y + e^{2x}\;,\;\; y(1) = 0$.
+			\item  $y'+\frac{y}{x}=\sqrt{1-x^2}$, $y(1)=\frac{1}{3}$.
+			\item  $\tan (x)y+y'=\cos(x)$, $y(\pi)=0$.
+		\end{enumerate}
+	
+	%Q
+	\item Find the most general power series solution of each differential equation, by repeatedly differentiating the equation. Give an explicit formula for the solution in terms of known functions (no summations).  For parts $\textbf{a}$ and $\textbf{b}$ your answer should involve one arbitrary constant $c_0 = y(x_0)$, and for part $\textbf{c}$ it should involve two arbitrary constants $c_0 = y(0)$ and $c_1 = y'(0)$. 
+	\begin{enumerate}
+		\item  $y' = y^2$\\
+		\textit{Hint: Apply the original equation after each time you differentiate. Center the series at $x_0 = 0$.}
+		\item $xy' + y = 0$ \\
+		\textit{Hint: When you write the equation in the form $y' = f(x,y)$, the function $f(x,y)$ is not continuous at $x=0$.  Therefore, you will need to center the series at a nonzero value of $x$, such as $x_0 =1$.}
+		\item  $y'' + 4y = 0$ 
+	\end{enumerate}
+
+	%Q
+	\item  Consider the second order differential equation
+	\[ xy'' + (1-x) y' + \lambda y = 0, \]
+	where $\lambda$ is a constant.   This differential equation comes up when modeling the hydrogen atom. 
+	\begin{enumerate}
+		\item  Assuming that the solution takes the form of a power series,
+		\[ y = a_0 + a_1 x + a_2 x^2 + \cdots  = \sum_{n=0}^{\infty} a_n x^n, \]
+		show that the coefficients satisfy the recursion
+		\[ a_{n+1} = \frac{n- \lambda}{(n+1)^2} a_n,\]
+		for all $n \geq 0$.
+		\item  If $\lambda = 3$, find the most general power series solution.  It should be a polynomial of degree $3$.
+		\item  For which other values of $\lambda$ will every power series solution be a polynomial function of $x$?
+	 \end{enumerate}
+	
+	%Q
+	
+	\item The goal of this problem is for you to get comfortable dealing with complex-valued functions
+	\[ z(t) = x(t) + iy(t) \]
+	in derivatives and integrals.   This will be an important skill later in the course.  Complex-valued functions can be differentiated and integrated just like ordinary real-valued functions, using the definitions
+	\[ \frac{d}{dt}\left[ x(t) + iy(t)\right] = x'(t) + i y'(t) \]
+	and
+	\[ \int \left[x(t) + iy(t)\right] dt = \int x(t)dt + i \int y(t) dt .\]
+	\begin{enumerate}
+		\item  Expand the function $e^{2it}$ into its real and imaginary parts, and use this to find its derivative.
+		\item  In general, if $q$ is a real number, use the strategy of part \textbf{a} to show that
+		\[ \frac{d}{dt} e^{iqt} = iqe^{iqt}. \] 
+		Notice that this is the same result you would get by ``pretending $i$ is a real number''. 
+		\item  Prove the product rule for complex-valued functions $z(t) = x(t)+iy(t)$, $w(t) = u(t)+iv(t)$:
+		\[ \frac{d}{dt} \left [ z w \right] = \frac{dz}{dt} w  + z \frac{d w}{dt} \]
+		Do this by expanding $zw$ into its real and imaginary parts, and applying the definition of differentiation for complex-valued functions.
+		\textit{Tip: To make the computation take up less space, don't explicit write out the $t$ dependence.  Just write $z = x+iy$, $w = u+iv$, $(xu)' = x'u + xu'$, etc.}
+		\item  Notice that $e^{(1+2i)t} = e^t e^{2it}$, and compute the derivative
+		\[ \frac{d}{dt} e^{(1+2i)t} \]
+		by applying the product rule.  You don't need to write out the real and imaginary parts.
+		\item  In general, if $\lambda= p+iq$ is an arbitrary complex number, use the product rule to show that
+		\[ \frac{d}{dt} e^{\lambda t} = \lambda e^{\lambda t}. \] 
+		Notice that this is the same result you would get by ``pretending that $\lambda$ is a real number".
+		\item Prove the fundamental theorem of calculus for complex-valued functions,
+		\[ \int_a^b z'(t) dt = z(b) - z(a), \]
+		by writing $z(t) = x(t) + i y(t)$ and applying the definition of integration for complex-valued functions.  
+		\item Evaluate the following indefinite integral, and find its imaginary part: 
+		\[ \int e^{(1+2i)t} dt. \]
+		\textit{Hint: Use the result in part \textbf{d} to find a complex antiderivative without splitting the integral in to real and imaginary parts.  Take the imaginary part when you're done.}
+		\item Let $z(t) = x(t) + iy(t)$ be a complex solution of the initial value problem
+		\[ \frac{dz}{dt} + z = 5e^{2it} \; , \; \; z(0) = 3 + 4i. \] 
+		Without solving for $z$, show that its imaginary part is a solution of the initial value problem
+		\[ \frac{dy}{dt} + y = 5\sin(2t) \; , \; \; y(0) = 4. \]
+		\item Find a solution of the initial value problem 
+		\[ \frac{dy}{dt} + y = 5\sin(2t) \; , \; \; y(0) = 4. \]
+		by first solving the complex initial value problem, and then taking the imaginary part of your answer. 
+
+	\end{enumerate}
+	
+		\end{enumerate}
+	
+\end{document}
+
+
+
+

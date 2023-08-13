@@ -1,0 +1,156 @@
+\documentclass[10pt,psamsfonts,reqno,oneside,letterpaper]{amsart}
+\usepackage[dvips,text={6.5truein,9truein},left=1truein,top=1truein]{geometry}
+\usepackage{amssymb,amsmath,amscd,enumerate}
+\usepackage{amscd}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,pdfstartview=FitH]{hyperref}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+% Uncomment to use syncing
+
+%\usepackage{pdfsync}
+
+
+% Paragraphs
+\parindent=0pt
+\parskip=5 pt plus 2 pt minus 1pt
+
+%color shortcuts
+\usepackage{color}
+\newcommand\change[1]{{\color{red}#1}}
+\newcommand\delete[1]{{\color{green}#1}}
+\newcommand\comment[1]{{\color{blue}#1\color{black}}}
+
+\newcommand{\xdownarrow}[1]{%
+	{\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+%other shortcuts
+\newcommand\Z{{\mathbb Z}}
+\newcommand\N{{\mathbb N}}
+\newcommand\C{{\mathbb C}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\id{{\mathrm{id}}}
+\newcommand\im{{\mathrm{im}}}
+
+\begin{document}
+	
+	\author{Lucas Culler}
+	
+	\section*{Math 18500 - Problem Set 1}
+	\begin{enumerate}
+		\item For each differential equation below:
+	\begin{enumerate}
+		\item Sketch the isoclines with slopes $-2$, $-1$, $0$, $1$, and $2$. \\
+		\textit{Tip: Use dashed/dotted lines for isoclines, or a lighter color.}
+		\item Use the isoclines you drew to sketch the slope field.
+		\item Sketch three solutions, with initial values $y(0)>0$, $y(0) =0$, and $y(0) <0$.
+		\textit{Tip: Use solid lines or a darker color for the solutions.}
+		\item Use your sketch to identify an explicit solution, and check by substituting in the equation.
+		\item If possible, identify the asymptotic behavior of the solutions as $x \to \pm \infty$. \\
+		\textit{In other words, identify the asymptotes of the solutions.}
+	\end{enumerate}
+	It's a good idea to use computer software like geogebra or grapher to confirm your sketch is accurate.  However, you must \emph{create} your sketch using the isocline method.  Sketches that were clearly produced by computer (i.e. with evenly spaced slope lines, instead of slope lines along isoclines) will not receive credit.  Also beware - numerical solutions produced by computer may be inaccurate in some cases.  Think about what you are doing, don't let the computer think for you!
+	\begin{enumerate}
+		\item $\frac{dy}{dx} = y - x - 1$.
+		\item $\frac{dy}{dx} = xy+x$.
+		\item $\frac{dy}{dx} = x^2 - y^2 -2x$
+	\end{enumerate} 
+	\textit{Tips for making sketches: 
+		\begin{enumerate}
+			\item Be very careful to draw the same slope at every point on the isocline.
+			\item Solutions have local maxima/minima or inflection points on the isocline of slope $0$.  
+			\item Look out for situations where the solution gets ``trapped'' between two isoclines.
+	\end{enumerate}}
+	
+	\item For each autonomous equation, sketch several solutions which exhibit all possible behaviors.  Identify any equilibrium solutions, and determine whether they are stable/unstable/semistable.
+	\begin{enumerate}
+		\item $y' = \cos(y)$ \\
+		\item$y' = (y-1)(y-2)(y-4)$ \\
+		\item $y' = y^2(y-1)(y+1)$ \\
+	\end{enumerate}
+	
+	\item For each differential equation, find all of the solutions, and determine which of these solutions has the given intial value:
+	\begin{enumerate}
+		\item $y' + 1 = 2y$, \; $y(0) = 1$
+		\item $y' = 6 e^{2x-y}$,\; $y(1) = 2$.
+		\item $y' = 1 + x + y + xy$, \; $y(-1) = 2$.
+		\item $xy'+2x^2y=2x^4$, \; $y(1)=1$.
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item  Consider an autonomous differential equation $y'=F(y(t))$ such that $F$ is continuous everywhere. If this differential equation has exactly two equilibria $y=y_1$ and $y=y_2$, give an example or explain why no example exists where
+	\begin{enumerate}
+		\item Both equilibria are stable.
+
+		
+		\item Both equilibria are unstable.
+	
+	\end{enumerate}
+	
+	\item Consider the autonomous differential equation $y'=F(y(t))$ with exactly one equilibrium $y=y_1$.
+	\begin{enumerate}
+		\item Explain why $z=y_1$ is also an equilibrium of the differential equation $z'=-F(z(t))$.
+
+		
+		\item If $z=y_1$ is a stable equilibrium for $z'=-F(z(t))$, what does this tell us about $y'=F(y(t))$?
+
+	\end{enumerate}
+	
+	\item In general, a non-autonomous differential equation $y'=F(t,y(t))$ does not have an equilibria because the dynamics of the system change over time. Give an example of a non-autonomous first-order differential equation that does have an equilibrium $y(t)=y_1$ such that the slope field is not initially zero at the equilibrium value, that is $y'=F(0,y_1)\neq 0$.
+
+\end{enumerate}
+	
+	\item  Newton's law of cooling states that the rate of heat loss of a body is directly proportional to the difference in the temperatures between the body and its surroundings. In this problem, $T(t)$ to the temperature of an object, $T_0$ to be the constant temperature of the environment surrounding the object and $k$ be the the constant of proportionality.
+	
+	\begin{enumerate}
+		\item Write a first order differential equation for the temperature of the object.
+		
+	\item Without solving the differential equation, determine whether $k$ is positive or negative, explaining your answer.
+		
+	\item  Solve the differential equation.
+		
+		\item Calculate $\displaystyle \lim_{t\rightarrow \infty} T(t)$. What does the disappearance of the constant tell us?
+
+		
+		\item What are two major assumptions used to construct this model?
+\end{enumerate}
+	
+	\item Consider a chemical equilibrium
+	\[ X + Y \leftrightarrows Z , \]
+	where $X$, $Y$, and $Z$ are chemical compounds whose concentrations are given as functions of time by $x(t)$, $y(t)$, and $z(t)$.  The concentration of $Z$ can be modeled by the differential equation
+	\[ \frac{dz}{dt} = k_{+} xy  - k_{-} z  \]   
+	where $k_{+}$ and $k_{-}$ are constants (the \emph{rate constants} of the forward and backward reactions). For simplicity, take $k_{+} = k_{-} = 1$, so that 
+	\[ \frac{dz}{dt} = xy  - z.  \]
+	\begin{enumerate}
+		\item Explain physically why we must have 
+		\[ x - x_0 = y-y_0 = z_0 - z \]
+		where $x(0)=x_0$, $y(0)=y_0$, and $z(0)=z_0$ are the initial concentrations.  
+		\item Assuming part $\textbf{a}$, show that $z(t)$ satisfies a first order differential equation of the form
+		\[ \frac{dz}{dt} = a + bz + cz^2, \]
+		where $a$, $b$, and $c$ are constants depending on $x_0$, $y_0$, and $z_0$.
+		\item Assume for simplicity that the initial concentrations are $x_0 =3$, $y_0 = 4$, $z_0 = 0$. What will be the limiting concentration of $Z$, 
+		\[ \lim_{t \to \infty} z(t) ?\]  
+		\textit{Hint: It is not necessary to solve the equation.}
+		\item Suppose that the reaction rates were instead given by $k_+ = 1$ and $k_- = 5$.  Explain, from a physical point of view, why the limiting concentration of $Z$ would be lower in this case.  Verify this mathematically, by computing the limiting concentration exactly. 
+		\item Verify your answer to part $\textbf{c}$, by solving for $z(t)$ and computing the limit. 
+		
+	\end{enumerate}
+	
+		\end{enumerate}
+	
+\end{document}
+
+
+
+
