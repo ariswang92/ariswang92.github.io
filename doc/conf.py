@@ -9,7 +9,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Zhongjian-Homepage'
-copyright = '2022, Wang Zhongjian'
+copyright = '2023, Wang Zhongjian'
 author = 'Wang Zhongjian'
 
 
