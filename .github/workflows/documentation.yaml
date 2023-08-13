@@ -10,7 +10,8 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinxcontrib.fulltoc
+          pip install sphinx 
+          pip install sphinxcontrib.fulltoc
       - name: Sphinx build
         run: |
           sphinx-build doc _build
