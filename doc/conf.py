@@ -18,7 +18,7 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = ''
 
-html_title = 'Home'
+html_title = 'Zhongjian'
 
 # -- General configuration ---------------------------------------------------
 
