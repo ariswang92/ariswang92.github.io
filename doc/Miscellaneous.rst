@@ -14,6 +14,7 @@ Beside Research and Teaching
 
 .. image:: resources/recent_photo.jpeg
    :width: 300
+   :align: center
 
 * I am an amateur in playing soccer. I used to play for - math department in Tsinghua; Lapchee college, post graduate students association, Chinese students club in the University of Hong Kong; Chinese students club in the University of Chicago; various social team like, 2CFC, Sun Yat Sen Memorial Park Club in Hong Kong and Chinatown Club in Chicago; NTU Staff Team in Singapore.
 
@@ -23,6 +24,7 @@ Beside Research and Teaching
 
 .. image:: resources/recent_photo_2.jpeg
    :width: 300
+   :align: center
 
 
 Useful Links
