@@ -5,7 +5,7 @@ Contact
 -------
 zhongjian dot wang at ntu dot edu dot sg
 
-| SPMS-MAS-05-023
+| SPMS-MAS-05-23
 | 21 Nanyang Link, Singapore 637371
 
 
@@ -17,11 +17,12 @@ Beside Research and Teaching
 
 * I am an amateur in playing soccer. I used to play for - math department in Tsinghua; Lapchee college, post graduate students association, Chinese students club in the University of Hong Kong; Chinese students club in the University of Chicago; various social team like, 2CFC, Sun Yat Sen Memorial Park Club in Hong Kong and Chinatown Club in Chicago; NTU Staff Team in Singapore.
 
-* I like doing road trips, especially in the old-fashioned way. Most of my trips are related to hiking in the west. I hike near Chicago during weekends.
+* In the US, I like doing road trips, especially in the old-fashioned way. Most of my trips are related to hiking in the west. I hike near Chicago during weekends. Now moving to Singapore, I am open to finding a new group.
 
 * I also started to spend some time on kayak, windsurfing and road bikes.
 
-
+.. image:: resources/recent_photo_2.jpeg
+   :width: 300
 
 
 Useful Links
