@@ -94,7 +94,7 @@ html_theme = "bizstyle" # classic, bizstyle
 html_theme_path = ["_themes"]
 html_theme_options = {
     'body_max_width': '960px',
-    'body_min_width': '380px',
+#    'body_min_width': '380px',
     'sidebarwidth': 200,
 }
 
