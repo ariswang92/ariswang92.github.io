@@ -19,7 +19,7 @@ jobs:
       - name: Mod Theme Color
         run: |
           sed -i 's/#336699/#181C62/g' _build/_static/bizstyle.css 
-          sed -E '/^div.footer$/,+1 s/(background-color:) white/\1 #D71440/' _build/_static/bizstyle.css 
+          sed -E '/^div.footer$/,+1 s/white/#D71440/' _build/_static/bizstyle.css 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
