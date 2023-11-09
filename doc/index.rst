@@ -18,7 +18,7 @@ Please refer to
 
 `My Homepage <http://www.wangzhongjian.com>`_
 
-`GitHub Repo <https://github.com/wang-zhongjian`_
+`GitHub Repo <https://github.com/wang-zhongjian>`_
 
 
 
