@@ -14,14 +14,11 @@ Welcome to Wang Zhongjian's Homepage!
 
 I am now an assistant professor at the Division of Mathematical Sciences at Nanyang Technological University. Prior to that, I was a William H. Kruskal Instructor at the University of Chicago.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+Please refer to 
 
-   Research
-   Teaching
-   Opening
-   Miscellaneous
+`My Homepage <http://www.wangzhongjian.com>`_
+
+`GitHub Repo <https://github.com/wang-zhongjian`_
 
 
 
